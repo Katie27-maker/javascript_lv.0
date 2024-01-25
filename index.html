@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            height: 300vh;
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: lightskyblue;
+            width: 260px;
+        }
+
+        .item {
+            width: 250px;
+            height: 250px;
+            background-color: lightgoldenrodyellow;
+            margin: 3px;
+        }
+    </style>
+<body>
+    <div class="items">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    
+    <script>
+        'use strict';
+
+        let browserPoint = (event)=>{
+            console.log(`브라우저 좌표 : ${event.pageX}, ${event.pageY}`);
+        }
+        let clientPoint = (event) =>{
+            console.log(`화면 좌표 : ${event.clientX}, ${event.clientY}`)
+        }
+        window.addEventListener('click',e=>{
+            browserPoint(e);
+            clientPoint(e);
+        });
+        
+        
+    </script>
+</body>
+</html>
